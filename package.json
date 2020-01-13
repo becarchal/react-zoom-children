@@ -32,7 +32,9 @@
     "prepublishOnly": "npm run compile && np --no-cleanup --yolo --no-publish",
     "lint": "eslint src/ --ext .tsx,.ts",
     "test": "father test",
-    "now-build": "npm run build"
+    "coverage": "father test --coverage",
+    "now-build": "npm run build",
+    "deploy": "father doc deploy"
   },
   "peerDependencies": {
     "react": "*"
