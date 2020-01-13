@@ -2,7 +2,6 @@ import { mount, shallow, render } from 'enzyme';
 import * as React from 'react';
 import toJson from 'enzyme-to-json';
 import ReactZoomChildren from '../src/';
-import { sleep } from '../src/utils';
 
 describe('react-zoom-children', () => {
   let wrapper;
@@ -44,5 +43,41 @@ describe('react-zoom-children', () => {
     const popDom = wrapper.find('.rzc_pop');
     popDom.simulate('click');
     expect(popDom.instance().style.transform).toBe('none');
+  });
+  it('zoomIn enlargedContent', () => {
+    wrapper = mount(
+      <ReactZoomChildren enlargedContent={'newChild'}>
+        <span className="testChild">testChild</span>
+      </ReactZoomChildren>,
+    );
+    const hander = wrapper.find('.rzc_hander');
+    hander.simulate('click');
+    const popDom = wrapper.find('.rzc_pop').instance();
+    expect(popDom.style.cursor).toBe('zoom-out');
+    expect(Number(popDom.style.zIndex)).toBe(999);
+  });
+  it('zoomIn customSize', () => {
+    wrapper = mount(
+      <ReactZoomChildren customSize={"100%"}>
+        <span className="testChild">testChild</span>
+      </ReactZoomChildren>,
+    );
+    const hander = wrapper.find('.rzc_hander');
+    hander.simulate('click');
+    const popDom = wrapper.find('.rzc_pop').instance();
+    expect(popDom.style.cursor).toBe('zoom-out');
+    expect(Number(popDom.style.zIndex)).toBe(999);
+  });
+  it('zoomIn onOpen', () => {
+    wrapper = mount(
+      <ReactZoomChildren onOpen={(ref) => { console.log(ref)}}>
+        <span className="testChild">testChild</span>
+      </ReactZoomChildren>,
+    );
+    const hander = wrapper.find('.rzc_hander');
+    hander.simulate('click');
+    const popDom = wrapper.find('.rzc_pop').instance();
+    expect(popDom.style.cursor).toBe('zoom-out');
+    expect(Number(popDom.style.zIndex)).toBe(999);
   });
 });

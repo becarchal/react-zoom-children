@@ -47,7 +47,7 @@ ReactDom.render(
 ## API
 | props      | type           | default | description    |
 |------------|----------------|---------|----------------|
-| prefixCls     |  string  | 'rzc' | prefix class |
+| prefix     |  string  | 'rzc' | prefix class |
 | wrapperClassName | string | null | wrapper class name |
 | enlargedContent | ReactElement\|null | null | Enlarged content |
 | transitionDuration | number | 0.4 | Transition duration in seconds|

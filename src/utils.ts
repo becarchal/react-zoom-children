@@ -65,18 +65,3 @@ export function getType(obj) {
   }
   return map[toString.call(obj)];
 }
-
-/**
- * @param  {number} delay=100
- */
-export function sleep(delay = 100) {
-  return Promise.resolve({
-    then(resolve) {
-      if (delay === 0) {
-        setImmediate(resolve);
-      } else {
-        setTimeout(resolve, delay);
-      }
-    }
-  });
-}
