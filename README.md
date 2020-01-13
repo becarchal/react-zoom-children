@@ -18,7 +18,7 @@
 
 ## Example
 
-http://react-zoom-children.github.io/react-zoom-children/examples/
+http://becarchal.github.io/react-zoom-children/examples/
 
 ## Usage
 

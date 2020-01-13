@@ -34,7 +34,7 @@
     "test": "father test",
     "coverage": "father test --coverage",
     "now-build": "npm run build",
-    "deploy": "father doc deploy"
+    "deploy": "npm run lint && father doc deploy"
   },
   "peerDependencies": {
     "react": "*"
