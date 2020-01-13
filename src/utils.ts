@@ -29,17 +29,15 @@ export function setStyle(el, styles, remember) {
     styles.transform = value
   }
 
-  let s = el.style
-  let original = {}
+  const s = el.style
+  const original = {}
 
-  for (let key in styles) {
+  Object.keys(styles).forEach(key => {
     if (remember) {
       original[key] = s[key] || ''
     }
-
     s[key] = styles[key]
-  }
-
+  })
   return original
 }
 
