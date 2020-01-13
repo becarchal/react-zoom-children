@@ -5,4 +5,8 @@ export default {
     eslint: true,
     prettier: true,
   },
+  doc: {
+    themeConfig: { mode: 'dark' },
+    base: '/react-zoom-children'
+  },
 };
