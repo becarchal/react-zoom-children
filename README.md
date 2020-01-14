@@ -18,7 +18,7 @@
 
 ## Example
 
-http://becarchal.github.io/react-zoom-children/examples/
+http://becarchal.github.io/react-zoom-children
 
 ## Usage
 
@@ -37,6 +37,9 @@ ReactDom.render(
 ## Install
 
 [![react-zoom-children](https://nodei.co/npm/react-zoom-children.png)](https://npmjs.org/package/react-zoom-children)
+```
+npm install -S react-zoom-children
+```
 
 ## Browser Support
 
@@ -69,6 +72,7 @@ ReactDom.render(
 ```
 npm install
 npm start
+npm run coverage
 ```
 
 ## 欢迎参与贡献
