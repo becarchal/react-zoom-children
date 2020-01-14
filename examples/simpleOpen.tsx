@@ -6,6 +6,13 @@ import ReactZoomChildren from '../src';
 
 import '../assets/index.less';
 import './assets/index.less';
+import Code from './components/common/code-block';
+const sourceCode = `\
+import ReactZoomChildren from 'react-zoom-children';
+
+<ReactZoomChildren onOpen={(ref) => { console.log(ref)}}>
+<div>SimpleOpen</div>
+</ReactZoomChildren>`;
 
 class SimpleOpen extends React.Component {
   public render() {
@@ -18,6 +25,7 @@ class SimpleOpen extends React.Component {
         <ReactZoomChildren onOpen={(ref) => { console.log(ref)}}>
           <div>SimpleOpen</div>
         </ReactZoomChildren>
+        <Code>{sourceCode}</Code>
       </div>
     )
   }

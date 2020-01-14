@@ -7,6 +7,13 @@ import ReactZoomChildren from '../src/';
 import '../assets/index.less';
 import './assets/index.less';
 
+import Code from './components/common/code-block';
+const sourceCode = `\
+import ReactZoomChildren from 'react-zoom-children';
+
+<ReactZoomChildren>
+  <div>this is a container demo</div>
+</ReactZoomChildren>`;
 class Demo extends React.Component {
   public render() {
     const containerStyle = {
@@ -18,6 +25,7 @@ class Demo extends React.Component {
         <ReactZoomChildren>
           <div>this is a container demo</div>
         </ReactZoomChildren>
+        <Code>{sourceCode}</Code>
       </div>
     )
   }
