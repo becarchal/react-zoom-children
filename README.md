@@ -16,6 +16,7 @@
 [download-image]: https://img.shields.io/npm/dm/react-zoom-children.svg?style=flat-square
 [download-url]: https://npmjs.org/package/react-zoom-children
 
+🔍zoom img or any childNode for react. (Inspired by [drawer](https://github.com/react-component/drawer), [zooming](https://github.com/kingdido999/zooming))
 ## Example
 
 http://becarchal.github.io/react-zoom-children
